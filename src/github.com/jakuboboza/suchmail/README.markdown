@@ -1,7 +1,7 @@
 # usage
 This is a simple tool to send emails from command line. You can use it like this:
 
-`cat ../src/github.com/jakuboboza/suchmail/main.go | ./suchmail -to=<recipent email@example.com> -from=<your email@example.com> -password=<enter your password here>`
+`./suchmail -to=<recipent email@example.com> -from=<your email@example.com> -password=<enter your password here> < src/github.com/jakuboboza/suchmail/main.go`
 
 This command will send contents of this file via email.
 
