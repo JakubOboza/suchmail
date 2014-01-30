@@ -11,3 +11,17 @@ You can also run it with -h to see optional arguments you can use.
 * If you will not pipe output to it, you will get black input and it will wait for characters until CTRL-D is pressed.
 
 
+# adding subject
+
+if you will make first line of input with SUBJECT it will be added as subject example:
+
+
+create mail.txt
+```
+SUBJECT: Hello my friend
+What are you doing with my gearz ?
+
+```
+
+usage:
+`./suchmail -to=<him@> -from=<you@> -password=<pass> < mail.txt`
