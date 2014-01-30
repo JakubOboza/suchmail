@@ -29,21 +29,20 @@ func main() {
 		*authserver,
 	)
 
+	var in *os.File
+	var errf error
 
-  var in *os.File
-  var errf error
+	switch name := flag.Arg(0); {
+	case name == "":
+		in = os.Stdin
+	default:
+		in, errf = os.Open(name)
+		if errf != nil {
+			fmt.Print(errf)
+		}
+	}
 
-  switch name := flag.Arg(0); {
-  case name == "":
-        in = os.Stdin
-  default:
-        in, errf = os.Open(name)
-        if errf != nil {
-                fmt.Print(errf)
-        }
-  }
-
-	msg, inerr := ioutil.ReadAll(in)  // os.Stdin
+	msg, inerr := ioutil.ReadAll(in) // os.Stdin
 	if inerr != nil {
 		fmt.Print(inerr)
 	}
